@@ -1,0 +1,5 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NetNotify · Admin Login</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body class="login-body"><main class="login-card"><div class="brand-mark">N</div><p class="eyebrow">NETWORK OPERATIONS</p><h1>NetNotify</h1><p class="muted">Sign in to manage network notifications.</p>
+{% with messages = get_flashed_messages(with_categories=true) %}{% for category, message in messages %}<div class="flash {{ category }}">{{ message }}</div>{% endfor %}{% endwith %}
+<form method="post"><label for="password">Admin password</label><input id="password" name="password" type="password" placeholder="Enter admin password" required autofocus><button class="btn primary full" type="submit">Sign in <span>→</span></button></form><p class="tiny muted">Default for local demo: <code>change-me-now</code>. Set NETNOTIFY_ADMIN_PASSWORD before LAN use.</p></main></body></html>
